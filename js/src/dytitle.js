@@ -1,4 +1,4 @@
-<!--崩溃欺骗-->
+<!--//崩溃欺骗-->
 var OriginTitile = document.title;
  var titleTime;
  document.addEventListener('visibilitychange', function () {
@@ -7,7 +7,7 @@ var OriginTitile = document.title;
          clearTimeout(titleTime);
      }
      else {
-         $('[rel="icon"]').attr('href', "/favicon.ico");
+         $('[rel="icon"]').attr('href', "https://sandaljack.github.io/liangxuejie.github.io//favicon.ico");
          document.title = ' 噫又好了~ ' + OriginTitile;
          titleTime = setTimeout(function () {
              document.title = OriginTitile;
