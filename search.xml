@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[你好]]></title>
+    <title><![CDATA[LAMP环境的搭建]]></title>
     <url>%2Fliangxuejie.github.io%2F2017%2F07%2F16%2Farticle-title%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
       <tags>
-        <tag>碎碎念</tag>
+        <tag>linux</tag>
+        <tag>lamp环境</tag>
       </tags>
   </entry>
   <entry>
