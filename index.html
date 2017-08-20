@@ -414,8 +414,52 @@
       
         
           
-            <p><img src="/images/201708202009.jpg" alt=""></p>
-
+            <p><img src="../../images/201708202009.jpg" alt=""><br><img src="http://i.imgur.com/YUGtgrK.jpg" alt=""></p>
+<p>##一.准备工作</p>
+<p>###1.安装编译工具gcc、gcc-c++</p>
+<p>注意解决依赖关系，推荐使用yum安装，若不能联网可使用安装光盘做为yum源</p>
+<p>1）编辑yum配置文件：</p>
+<pre><code># mount /dev/cdrom /mnt/cdrom
+# vim /etc/yum.repos.d/CentOS-Media.repo 
+    [c6-media] 
+    name=CentOS-$releasever - Media
+    baseurl=file:///mnt/cdrom   * 修改为光盘挂载点
+    gpgcheck=0
+    enabled=1  * 改为1意为启用
+    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+</code></pre><p>2）剪切/etc/yum.repos.d/CentOS-Base.repo</p>
+<pre><code># mv /etc/yum.repos.d/CentOS-Base.repo /backup
+</code></pre><p>3）依次安装gcc、gcc-c++</p>
+<pre><code># yum -y install gcc
+# yum -y install gcc-c++
+</code></pre><p>###2、关闭系统RPM安装包的Apache、MySQL的服务</p>
+<p>关闭启动的服务httpd、mysqld</p>
+<pre><code># service httpd stop
+# service mysqld stop
+</code></pre><p>确定rpm包安装的httpd和mysqld不能开机自启动</p>
+<pre><code>chkconfig  --level  2345  httpd（mysqld）  off
+</code></pre><p>###3、关闭SELinux，允许防火墙80端口访问</p>
+<p>1）关闭SELinux</p>
+<pre><code># vi /etc/selinux/config
+    SELINUX=disabled   * 若安装时没有禁用SELinux ，将enforcing改为disabled
+    修改后需重新启动Linux方可生效！
+</code></pre><p>2）关闭防火墙Netfilter/iptables</p>
+<p>因尚未做防火墙讲解，直接简单的关闭所有防火墙设置：</p>
+<pre><code># iptables  -F     * 如果没有禁用防火墙，默认80端口禁止访问
+# iptables    -Z        
+# iptables  -X
+</code></pre><p>###4、关闭不必要自启动服务</p>
+<pre><code># ntsysv
+以下列出服务可保持自启动，未列出的服务都可以关闭：
+atd    
+crond        # atd、crond计划任务
+irqbalance
+microcode_ctl   # 系统irq端口调用，系统服务
+network    #网络设置
+sendmail   #邮件
+sshd      #远程管理
+syslog    #系统日志
+</code></pre>
           
         
       
