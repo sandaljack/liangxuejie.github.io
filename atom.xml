@@ -5,7 +5,7 @@
   <link href="/liangxuejie.github.io/atom.xml" rel="self"/>
   
   <link href="https://sandaljack.github.io/liangxuejie.github.io/"/>
-  <updated>2017-08-20T14:02:32.873Z</updated>
+  <updated>2017-08-21T05:20:05.552Z</updated>
   <id>https://sandaljack.github.io/liangxuejie.github.io/</id>
   
   <author>
@@ -20,13 +20,11 @@
     <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/linux-lamp/"/>
     <id>https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/linux-lamp/</id>
     <published>2017-07-16T11:04:07.000Z</published>
-    <updated>2017-08-20T14:02:32.873Z</updated>
+    <updated>2017-08-21T05:20:05.552Z</updated>
     
     <summary type="html">
     
-      &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/YUGtgrK.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=
+      &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/YUGtgrK.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;linux、apache、mysql、php四个开源web黄金搭档&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;
     
     </summary>
     
@@ -44,11 +42,11 @@
     <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/hello-world/"/>
     <id>https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/hello-world/</id>
     <published>2017-07-16T10:49:26.456Z</published>
-    <updated>2017-07-16T10:49:26.457Z</updated>
+    <updated>2017-08-21T05:30:17.439Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;你好，世界&lt;br&gt;
     
     </summary>
     
