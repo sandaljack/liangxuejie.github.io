@@ -82,8 +82,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/liangxuejie.github.io/atom.xml" title="凉小窝" type="application/atom+xml" />
 
@@ -105,7 +103,7 @@
 <meta property="og:site_name" content="凉小窝">
 <meta property="og:description" content="linux、apache、mysql、php四个开源web黄金搭档">
 <meta property="og:image" content="http://i.imgur.com/YUGtgrK.jpg">
-<meta property="og:updated_time" content="2017-08-22T08:02:04.940Z">
+<meta property="og:updated_time" content="2017-08-22T09:07:42.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LAMP环境的搭建">
 <meta name="twitter:description" content="linux、apache、mysql、php四个开源web黄金搭档">
@@ -217,7 +215,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/liangxuejie.github.io/categories/" rel="section">
+          <a href="/liangxuejie.github.io/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -227,7 +225,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/liangxuejie.github.io/about/" rel="section">
+          <a href="/liangxuejie.github.io/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -237,7 +235,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/liangxuejie.github.io/archives/" rel="section">
+          <a href="/liangxuejie.github.io/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -247,7 +245,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/liangxuejie.github.io/tags/" rel="section">
+          <a href="/liangxuejie.github.io/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -419,7 +417,7 @@
 <a id="more"></a> 
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装编译工具gcc、gcc-c"><a href="#安装编译工具gcc、gcc-c" class="headerlink" title="安装编译工具gcc、gcc-c++"></a>安装编译工具gcc、gcc-c++</h3><p>注意解决依赖关系，推荐使用yum安装，若不能联网可使用安装光盘做为yum源</p>
 <p>1）编辑yum配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># mount /dev/cdrom /mnt/cdrom</div><div class="line"># vim /etc/yum.repos.d/CentOS-Media.repo </div><div class="line">	[c6-media] </div><div class="line">	name=CentOS-$releasever - Media</div><div class="line">	baseurl=file:///mnt/cdrom   * 修改为光盘挂载点</div><div class="line">	gpgcheck=0</div><div class="line">	enabled=1  * 改为1意为启用</div><div class="line">	gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># mount /dev/cdrom /mnt/cdrom</div><div class="line"># vim /etc/yum.repos.d/CentOS-Media.repo </div><div class="line">  [c6-media] </div><div class="line">  name=CentOS-$releasever - Media</div><div class="line">  baseurl=file:///mnt/cdrom   * 修改为光盘挂载点</div><div class="line">  gpgcheck=0</div><div class="line">  enabled=1  * 改为1意为启用</div><div class="line">  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6</div></pre></td></tr></table></figure>
 <p>2）剪切/etc/yum.repos.d/CentOS-Base.repo</p>
 <pre><code># mv /etc/yum.repos.d/CentOS-Base.repo /backup
 </code></pre><p>3）依次安装gcc、gcc-c++<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># yum -y install gcc</div><div class="line"># yum -y install gcc-c++</div></pre></td></tr></table></figure></p>
@@ -428,10 +426,10 @@
 <pre><code>chkconfig  --level  2345  httpd（mysqld）  off
 </code></pre><h3 id="关闭SELinux，允许防火墙80端口访问"><a href="#关闭SELinux，允许防火墙80端口访问" class="headerlink" title="关闭SELinux，允许防火墙80端口访问"></a>关闭SELinux，允许防火墙80端口访问</h3><p>1）关闭SELinux<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># vi /etc/selinux/config</div><div class="line">  SELINUX=disabled   * 若安装时没有禁用SELinux ，将enforcing改为disabled</div><div class="line">  修改后需重新启动Linux方可生效！</div></pre></td></tr></table></figure></p>
 <p>2）关闭防火墙Netfilter/iptables</p>
-<p>因尚未做防火墙讲解，直接简单的关闭所有防火墙设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># iptables  -F     * 如果没有禁用防火墙，默认80端口禁止访问</div><div class="line"># iptables -Z		</div><div class="line"># iptables  -X</div></pre></td></tr></table></figure></p>
-<h3 id="关闭不必要自启动服务"><a href="#关闭不必要自启动服务" class="headerlink" title="关闭不必要自启动服务"></a>关闭不必要自启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># ntsysv</div><div class="line">以下列出服务可保持自启动，未列出的服务都可以关闭：</div><div class="line">atd    </div><div class="line">crond        # atd、crond计划任务</div><div class="line">irqbalance</div><div class="line">microcode_ctl   # 系统irq端口调用，系统服务</div><div class="line">network    #网络设置</div><div class="line">sendmail   #邮件</div><div class="line">sshd      #远程管理</div><div class="line">syslog    #系统日志</div></pre></td></tr></table></figure>
+<p>因尚未做防火墙讲解，直接简单的关闭所有防火墙设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># iptables  -F     * 如果没有禁用防火墙，默认80端口禁止访问</div><div class="line"># iptables  -Z		</div><div class="line"># iptables  -X</div></pre></td></tr></table></figure></p>
+<h3 id="关闭不必要自启动服务"><a href="#关闭不必要自启动服务" class="headerlink" title="关闭不必要自启动服务"></a>关闭不必要自启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># ntsysv</div><div class="line">*以下列出服务可保持自启动，未列出的服务都可以关闭：</div><div class="line">atd    </div><div class="line">crond        * atd、crond计划任务</div><div class="line">irqbalance</div><div class="line">microcode_ctl   * 系统irq端口调用，系统服务</div><div class="line">network    *网络设置</div><div class="line">sendmail   *邮件</div><div class="line">sshd      *远程管理</div><div class="line">syslog    *系统日志</div></pre></td></tr></table></figure>
 <h3 id="拷贝源码包，解包解压缩"><a href="#拷贝源码包，解包解压缩" class="headerlink" title="拷贝源码包，解包解压缩"></a>拷贝源码包，解包解压缩</h3><p>建议将LAMP环境安装源码包统一存放在一个目录下，如/lamp。可编写个批量处理脚本，一次性把所有.tar.gz的安装包解包解压缩<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vim tar.sh    </div><div class="line">cd /lamp</div><div class="line">/bin/ls *.tar.gz &gt; ls.list</div><div class="line">for TAR in `cat ls.list`</div><div class="line">do</div><div class="line">  /bin/tar -zxf $TAR</div><div class="line">done</div><div class="line">/bin/rm ls.list</div><div class="line"># chmod u+x tar.sh</div><div class="line"># ./tar.sh</div></pre></td></tr></table></figure></p>
-<h3 id="查看确认磁盘空间未满"><a href="#查看确认磁盘空间未满" class="headerlink" title="查看确认磁盘空间未满"></a>查看确认磁盘空间未满</h3><pre><code>df -h    * 若/分区已满，可以移动安装包到其他分区或删除其他无用文件
+<h3 id="查看确认磁盘空间未满"><a href="#查看确认磁盘空间未满" class="headerlink" title="查看确认磁盘空间未满"></a>查看确认磁盘空间未满</h3><pre><code># df -h      * 若/分区已满，可以移动安装包到其他分区或删除其他无用文件
 </code></pre><h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><ul>
 <li><p>如何确定报错：<br>1）安装过程停止<br>2）停止后，一页界面中出现error</p>
 </li>
@@ -441,7 +439,7 @@
 </li>
 </ul>
 <h3 id="安装libxml2"><a href="#安装libxml2" class="headerlink" title="安装libxml2"></a>安装libxml2</h3><p>Libxml2 是一个xml c语言版的解析器，本来是为Gnome项目开发的工具，是一个基于MIT License的免费开源软件。它除了支持c语言版以外，还支持c++、PHP、Pascal、Ruby、Tcl等语言的绑定，能在Windows、Linux、Solaris、MacOsX等平台上运行。功能还是相当强大的，相信满足一般用户需求没有任何问题。</p>
-<p>libxml是一个用来解析XML文档的函数库。它用C语言写成, 并且能为多种语言所调用，例如C语言，C++，XSH。C#, Python，Kylix/Delphi，Ruby，和PHP等。Perl中也可以使用XML::LibXML模块。它最初是为GNOME开发的项目，但现在可以用在各种各样的方面。libXML 代码可移植性非常好，因为它基于标准的ANSI C库, 并采用MIT许可证。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#yum  install  -y  libxml2-devel	* 如果报错，安装此包后再尝试安装</div><div class="line">mount /dev/sr0 /mnt/cdrom    </div><div class="line">yum -y install python-devel		* 必须安装</div><div class="line"> cd /lamp/libxml2-2.9.1</div><div class="line"> ./configure --prefix=/usr/local/libxml2/</div><div class="line"> make </div><div class="line"> make install</div></pre></td></tr></table></figure></p>
+<p>libxml是一个用来解析XML文档的函数库。它用C语言写成, 并且能为多种语言所调用，例如C语言，C++，XSH。C#, Python，Kylix/Delphi，Ruby，和PHP等。Perl中也可以使用XML::LibXML模块。它最初是为GNOME开发的项目，但现在可以用在各种各样的方面。libXML 代码可移植性非常好，因为它基于标准的ANSI C库, 并采用MIT许可证。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#yum  install  -y  libxml2-devel	* 如果报错，安装此包后再尝试安装</div><div class="line">#mount /dev/sr0 /mnt/cdrom    </div><div class="line">#yum -y install python-devel		* 必须安装</div><div class="line">cd /lamp/libxml2-2.9.1</div><div class="line">./configure --prefix=/usr/local/libxml2/</div><div class="line">make </div><div class="line">make install</div></pre></td></tr></table></figure></p>
 <h3 id="安装libmcrypt"><a href="#安装libmcrypt" class="headerlink" title="安装libmcrypt"></a>安装libmcrypt</h3><p>libmcrypt是加密算法扩展库。支持DES, 3DES, RIJNDAEL, Twofish, IDEA, GOST, CAST-256, ARCFOUR, SERPENT, SAFER+等算法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /lamp/libmcrypt-2.5.8</div><div class="line">./configure --prefix=/usr/local/libmcrypt/</div><div class="line">make </div><div class="line">make install</div><div class="line">* 需调用gcc-c++编译器，未安装会报错</div></pre></td></tr></table></figure></p>
 <h3 id="安装libltdl"><a href="#安装libltdl" class="headerlink" title="安装libltdl"></a>安装libltdl</h3><p>也在libmcrypt源码目录中，非新软件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd /lamp/libmcrypt-2.5.8/libltdl</div><div class="line">./configure --enable-ltdl-install</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure></p>
 <h3 id="安装mhash"><a href="#安装mhash" class="headerlink" title="安装mhash"></a>安装mhash</h3><p>Mhash是基于离散数学原理的不可逆向的php加密方式扩展库，其在默认情况下不开启。mhash的可以用于创建校验数值，消息摘要，消息认证码，以及无需原文的关键信息保存（如密码）等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd /lamp/mhash-0.9.9.9</div><div class="line">./configure </div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure></p>
@@ -619,7 +617,7 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/liangxuejie.github.io/archives/">
+              <a href="/liangxuejie.github.io/archives">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -630,10 +628,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/liangxuejie.github.io/categories/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -641,10 +639,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/liangxuejie.github.io/tags/index.html">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
