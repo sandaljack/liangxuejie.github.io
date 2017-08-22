@@ -1001,6 +1001,7 @@ pre .javascript .function {
   font-size: 20px;
   font-weight: normal;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-color:#383838;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -2626,7 +2627,7 @@ hr {
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .logo-line-before,
@@ -2639,7 +2640,7 @@ hr {
   position: relative;
   display: block;
   height: 2px;
-  background: #222;
+  background: #383838;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
