@@ -1784,7 +1784,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #36ff82;
+  background: #d2ff18;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2622,7 +2622,7 @@ hr {
   }
 }
 .logo-line-before,
-.logmenu {
+.logo-line-after {
   display: block;
   overflow: hidden;
   margin: 0 auto;

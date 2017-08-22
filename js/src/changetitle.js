@@ -22,8 +22,8 @@ var content = [
 ];
 
 $('.site-title').html(content[id]);
-// $('.logo-line-before').attr('style', 'width:90%');
-// $('.logo-line-after').attr('style', 'width:90%');
+$('.logo-line-before').attr('style', 'width:100%');
+$('.logo-line-after').attr('style', 'width:100%');
 // $('.logo-line-after').parents().parents().parents().after('<br>');
 // $('.logo-line-after').parent('custom-logo-site-title').siblings('site-nav').before('<br>');
 $('.site-nav').before('<br><br>').children('.menu').attr('style','float:left');
