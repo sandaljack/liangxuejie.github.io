@@ -38,18 +38,18 @@ $(document).ready(function () {
     }, settings.status);
   }
 
-  SidebarToggleLine.prototype.init = function () {
-    this.transform('init');
-  };
-  SidebarToggleLine.prototype.arrow = function () {
-    this.transform('arrow');
-  };
-  SidebarToggleLine.prototype.close = function () {
-    this.transform('close');
-  };
-  SidebarToggleLine.prototype.transform = function (status) {
-    this.el.velocity('stop').velocity(this.status[status]);
-  };
+  // SidebarToggleLine.prototype.init = function () {
+  //   this.transform('init');
+  // };
+  // SidebarToggleLine.prototype.arrow = function () {
+  //   this.transform('arrow');
+  // };
+  // SidebarToggleLine.prototype.close = function () {
+  //   this.transform('close');
+  // };
+  // SidebarToggleLine.prototype.transform = function (status) {
+  //   this.el.velocity('stop').velocity(this.status[status]);
+  // };
 
   var sidebarToggleLine1st = new SidebarToggleLine({
     el: '.sidebar-toggle-line-first',

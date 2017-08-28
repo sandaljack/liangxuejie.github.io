@@ -5,7 +5,7 @@
   <link href="/liangxuejie.github.io/atom.xml" rel="self"/>
   
   <link href="https://sandaljack.github.io/liangxuejie.github.io/"/>
-  <updated>2017-08-22T09:07:42.409Z</updated>
+  <updated>2017-08-28T07:16:21.059Z</updated>
   <id>https://sandaljack.github.io/liangxuejie.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP Ajax 跨域问题最佳解决方案</title>
+    <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/07/30/php-ajax-crossdomain/"/>
+    <id>https://sandaljack.github.io/liangxuejie.github.io/2017/07/30/php-ajax-crossdomain/</id>
+    <published>2017-07-30T12:40:07.000Z</published>
+    <updated>2017-08-28T07:16:21.059Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/5NCtChl.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; align=&quot;center&quot;&gt;&lt;br&gt;&lt;strong&gt;php ajax 跨域问题&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="https://sandaljack.github.io/liangxuejie.github.io/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://sandaljack.github.io/liangxuejie.github.io/tags/php/"/>
+    
+      <category term="ajax" scheme="https://sandaljack.github.io/liangxuejie.github.io/tags/ajax/"/>
+    
+  </entry>
   
   <entry>
     <title>LAMP环境的搭建</title>

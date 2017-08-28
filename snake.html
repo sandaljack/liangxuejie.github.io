@@ -101,7 +101,7 @@
 <meta property="og:url" content="https://sandaljack.github.io/liangxuejie.github.io/snake.html">
 <meta property="og:site_name" content="凉小窝">
 <meta property="og:description" content="var rows = 30;  //表格的行     var cols = 80; //表格的列     var timer;      //定时器     var store = 0;  //分数      //1.写一个表格     document.write(&apos;&apos;);         for (var i = 0; i &amp;lt; rows; i++) {             d">
-<meta property="og:updated_time" content="2017-08-24T07:55:45.990Z">
+<meta property="og:updated_time" content="2017-08-28T02:10:04.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="凉小窝">
 <meta name="twitter:description" content="var rows = 30;  //表格的行     var cols = 80; //表格的列     var timer;      //定时器     var store = 0;  //分数      //1.写一个表格     document.write(&apos;&apos;);         for (var i = 0; i &amp;lt; rows; i++) {             d">
@@ -389,7 +389,7 @@
                 // console.dir(arr);
                 if (x >= cols || x < 0 || y >= rows || y < 0) {
                     clearInterval(timer);
-                    $('h2 strong').html(store);
+                    $('font strong').html(store);
                     $('input[name=store]').val(store);
                     $('.modal').modal({
                         keyboard: false,
@@ -487,6 +487,7 @@
     $('body').attr('style','overflow-y:hidden;');
     $('#tab').attr('style', 'margin-top:-50px');
     $('.main').attr('style', 'margin-bottom:-50px');
+    $('title').html('snake | 凉小窝');
     
 
 </script>
@@ -509,7 +510,7 @@
           <form onsubmit="return save(this)">
             <input type="hidden" name="store">
  
-            <h2>很遗憾，你挂了！共获得了 <strong></strong> 分，是否重来？</h2>
+            <b><font size="4">很遗憾，你挂了！共获得了 <strong></strong> 分，是否重来？</font></b><br>
             <button class="btn" onclick="location.reload()">重来</button>
             <button type="button" onclick="$(&#39;.modal&#39;).modal(&#39;hide&#39;)" class="btn">算了</button>
           </form>
@@ -552,17 +553,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/liangxuejie.github.io/uploads/touxiang.jpg"
@@ -577,7 +569,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/liangxuejie.github.io/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -588,7 +580,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/liangxuejie.github.io/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -599,7 +591,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/liangxuejie.github.io/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -631,22 +623,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">很遗憾，你挂了！共获得了  分，是否重来？</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
