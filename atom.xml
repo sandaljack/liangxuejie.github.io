@@ -5,7 +5,7 @@
   <link href="/liangxuejie.github.io/atom.xml" rel="self"/>
   
   <link href="https://sandaljack.github.io/liangxuejie.github.io/"/>
-  <updated>2017-08-28T07:16:21.059Z</updated>
+  <updated>2017-09-03T07:47:12.482Z</updated>
   <id>https://sandaljack.github.io/liangxuejie.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库性能调优</title>
+    <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/08/15/mysql-optimization/"/>
+    <id>https://sandaljack.github.io/liangxuejie.github.io/2017/08/15/mysql-optimization/</id>
+    <published>2017-08-15T07:20:07.000Z</published>
+    <updated>2017-09-03T07:47:12.482Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/oDjqr7i.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; align=&quot;center&quot;&gt;&lt;br&gt;&lt;strong&gt;mysql数据库优化&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="https://sandaljack.github.io/liangxuejie.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://sandaljack.github.io/liangxuejie.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP Ajax 跨域问题最佳解决方案</title>
@@ -61,10 +81,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/hello-world/"/>
-    <id>https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/hello-world/</id>
-    <published>2017-07-16T10:49:26.456Z</published>
-    <updated>2017-08-22T11:57:36.306Z</updated>
+    <link href="https://sandaljack.github.io/liangxuejie.github.io/2017/07/01/hello-world/"/>
+    <id>https://sandaljack.github.io/liangxuejie.github.io/2017/07/01/hello-world/</id>
+    <published>2017-07-01T04:20:07.000Z</published>
+    <updated>2017-09-03T07:48:35.551Z</updated>
     
     <summary type="html">
     
