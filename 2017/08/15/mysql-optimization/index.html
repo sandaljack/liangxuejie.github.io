@@ -104,7 +104,7 @@
 <meta property="og:description" content="mysql数据库优化">
 <meta property="og:image" content="https://i.imgur.com/oDjqr7i.jpg">
 <meta property="og:image" content="http://haveashow.net/html/mysql/img/2016-08-05_201403.png">
-<meta property="og:updated_time" content="2017-09-03T07:47:12.482Z">
+<meta property="og:updated_time" content="2017-09-03T08:07:10.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库性能调优">
 <meta name="twitter:description" content="mysql数据库优化">
@@ -510,8 +510,11 @@ varchar数据类型可以存储超过255个字符
 <pre><code>select * from user where name = 123 //这SQL语句用不到name索引
 select * from user where name = &apos;123&apos; //这样写才会用到name字段上的索引
 </code></pre><p>3.在使用like关键字进行查询的语句中，如果匹配字符串的第一个字符为”%”，索引不会起作用。</p>
-<p>4.联合索引，只有查询条件中使用了这些字段中第一个字段时，索引才会被使用<br>    create index in_name on user(name,email)<br>    explain select <em> from user where name = ‘jack’; //用到索引<br>    explain select </em> from user where email = ‘jack@qq.com’; //用不到索引</p>
-<p>5.使用OR关键字的查询语句</p>
+<p>4.联合索引，只有查询条件中使用了这些字段中第一个字段时，索引才会被使用</p>
+<pre><code>create index in_name on user(name,email)
+explain select * from user where name = &apos;jack&apos;; //用到索引
+explain select * from user where email = &apos;jack@qq.com&apos;; //用不到索引
+</code></pre><p>5.使用OR关键字的查询语句</p>
 <pre><code>查询语句的查询条件中只有OR关键字，且OR前后的两个条件中的列都是索引时，查询中才使用索引。否则查询将不使用索引。
 </code></pre><p>6.order by 的字段混合使用asc和desc用不到索引</p>
 <pre><code>select * from user order by id desc,name asc;
