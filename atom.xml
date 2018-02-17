@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>凉小窝</title>
   <subtitle>每天进步一点</subtitle>
-  <link href="liangxuejie.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://sandaljack.github.io/"/>
+  <link href="sandaljack.github.io/"/>
   <updated>2017-09-03T08:07:10.149Z</updated>
-  <id>https://sandaljack.github.io/</id>
+  <id>sandaljack.github.io/</id>
   
   <author>
     <name>liangxuejie</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>数据库性能调优</title>
-    <link href="https://sandaljack.github.io/2017/08/15/mysql-optimization/"/>
-    <id>https://sandaljack.github.io/2017/08/15/mysql-optimization/</id>
+    <link href="sandaljack.github.io/2017/08/15/mysql-optimization/"/>
+    <id>sandaljack.github.io/2017/08/15/mysql-optimization/</id>
     <published>2017-08-15T07:20:07.000Z</published>
     <updated>2017-09-03T08:07:10.149Z</updated>
     
@@ -28,17 +28,17 @@
     
     </summary>
     
-      <category term="mysql" scheme="https://sandaljack.github.io/categories/mysql/"/>
+      <category term="mysql" scheme="sandaljack.github.io/categories/mysql/"/>
     
     
-      <category term="mysql" scheme="https://sandaljack.github.io/tags/mysql/"/>
+      <category term="mysql" scheme="sandaljack.github.io/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>PHP Ajax 跨域问题最佳解决方案</title>
-    <link href="https://sandaljack.github.io/2017/07/30/php-ajax-crossdomain/"/>
-    <id>https://sandaljack.github.io/2017/07/30/php-ajax-crossdomain/</id>
+    <link href="sandaljack.github.io/2017/07/30/php-ajax-crossdomain/"/>
+    <id>sandaljack.github.io/2017/07/30/php-ajax-crossdomain/</id>
     <published>2017-07-30T12:40:07.000Z</published>
     <updated>2017-08-28T07:16:21.059Z</updated>
     
@@ -48,19 +48,19 @@
     
     </summary>
     
-      <category term="php" scheme="https://sandaljack.github.io/categories/php/"/>
+      <category term="php" scheme="sandaljack.github.io/categories/php/"/>
     
     
-      <category term="php" scheme="https://sandaljack.github.io/tags/php/"/>
+      <category term="php" scheme="sandaljack.github.io/tags/php/"/>
     
-      <category term="ajax" scheme="https://sandaljack.github.io/tags/ajax/"/>
+      <category term="ajax" scheme="sandaljack.github.io/tags/ajax/"/>
     
   </entry>
   
   <entry>
     <title>LAMP环境的搭建</title>
-    <link href="https://sandaljack.github.io/2017/07/16/linux-lamp/"/>
-    <id>https://sandaljack.github.io/2017/07/16/linux-lamp/</id>
+    <link href="sandaljack.github.io/2017/07/16/linux-lamp/"/>
+    <id>sandaljack.github.io/2017/07/16/linux-lamp/</id>
     <published>2017-07-16T11:04:07.000Z</published>
     <updated>2017-08-22T09:07:42.409Z</updated>
     
@@ -70,19 +70,19 @@
     
     </summary>
     
-      <category term="linux" scheme="https://sandaljack.github.io/categories/linux/"/>
+      <category term="linux" scheme="sandaljack.github.io/categories/linux/"/>
     
     
-      <category term="linux" scheme="https://sandaljack.github.io/tags/linux/"/>
+      <category term="linux" scheme="sandaljack.github.io/tags/linux/"/>
     
-      <category term="lamp环境" scheme="https://sandaljack.github.io/tags/lamp%E7%8E%AF%E5%A2%83/"/>
+      <category term="lamp环境" scheme="sandaljack.github.io/tags/lamp%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sandaljack.github.io/2017/07/01/hello-world/"/>
-    <id>https://sandaljack.github.io/2017/07/01/hello-world/</id>
+    <link href="sandaljack.github.io/2017/07/01/hello-world/"/>
+    <id>sandaljack.github.io/2017/07/01/hello-world/</id>
     <published>2017-07-01T04:20:07.000Z</published>
     <updated>2017-09-03T07:48:35.551Z</updated>
     
