@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>凉小窝</title>
   <subtitle>每天进步一点</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/liangxuejie.github.io/atom.xml" rel="self"/>
   
   <link href="https://sandaljack.github.io/"/>
   <updated>2017-09-03T08:07:10.149Z</updated>
