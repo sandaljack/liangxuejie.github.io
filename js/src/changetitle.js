@@ -29,4 +29,4 @@ $('.logo-line-after').attr('style', 'width:90%');
 // $('.logo-line-after').parent('custom-logo-site-title').siblings('site-nav').before('<br>');
 $('.site-nav').before('<br><br>').children('.menu').attr('style','float:left');
 
-$('#menu').append('<li class="menu-item"><a href="/liangxuejie.github.io/snake.html" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> 娱乐</a></li>');
+$('#menu').append('<li class="menu-item"><a href="/snake.html" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> 娱乐</a></li>');
