@@ -5,7 +5,7 @@
   <link href="/liangxuejie.github.io/atom.xml" rel="self"/>
   
   <link href="https://sandaljack.github.io/"/>
-  <updated>2017-09-03T08:07:10.149Z</updated>
+  <updated>2018-04-07T08:12:15.795Z</updated>
   <id>https://sandaljack.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>数据库性能调优</title>
-    <link href="https://sandaljack.github.io/2017/08/15/mysql-optimization/"/>
-    <id>https://sandaljack.github.io/2017/08/15/mysql-optimization/</id>
-    <published>2017-08-15T07:20:07.000Z</published>
-    <updated>2017-09-03T08:07:10.149Z</updated>
+    <link href="https://sandaljack.github.io/2018/01/03/mysql-optimization/"/>
+    <id>https://sandaljack.github.io/2018/01/03/mysql-optimization/</id>
+    <published>2018-01-03T07:20:07.000Z</published>
+    <updated>2018-04-07T08:12:15.795Z</updated>
     
     <summary type="html">
     
@@ -36,11 +36,31 @@
   </entry>
   
   <entry>
+    <title>谈谈预防SQL注入</title>
+    <link href="https://sandaljack.github.io/2017/11/08/php_sql_attatck/"/>
+    <id>https://sandaljack.github.io/2017/11/08/php_sql_attatck/</id>
+    <published>2017-11-08T05:27:57.000Z</published>
+    <updated>2018-04-06T11:59:38.189Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/rLnk3hD.png&quot; width=&quot;600&quot; height=&quot;300&quot; align=&quot;center&quot;&gt;&lt;br&gt;&lt;strong&gt;预防SQL注入&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="https://sandaljack.github.io/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="https://sandaljack.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP Ajax 跨域问题最佳解决方案</title>
-    <link href="https://sandaljack.github.io/2017/07/30/php-ajax-crossdomain/"/>
-    <id>https://sandaljack.github.io/2017/07/30/php-ajax-crossdomain/</id>
-    <published>2017-07-30T12:40:07.000Z</published>
-    <updated>2017-08-28T07:16:21.059Z</updated>
+    <link href="https://sandaljack.github.io/2017/09/23/php-ajax-crossdomain/"/>
+    <id>https://sandaljack.github.io/2017/09/23/php-ajax-crossdomain/</id>
+    <published>2017-09-23T12:40:07.000Z</published>
+    <updated>2018-04-07T08:11:33.475Z</updated>
     
     <summary type="html">
     
@@ -58,11 +78,51 @@
   </entry>
   
   <entry>
+    <title>phpstorm安装xdebug断点调试</title>
+    <link href="https://sandaljack.github.io/2017/07/17/php-phpstorm-xdebug/"/>
+    <id>https://sandaljack.github.io/2017/07/17/php-phpstorm-xdebug/</id>
+    <published>2017-07-17T05:20:27.000Z</published>
+    <updated>2018-04-07T08:11:01.965Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/RsEP49X.png&quot; width=&quot;600&quot; height=&quot;300&quot; align=&quot;center&quot;&gt;&lt;br&gt;&lt;strong&gt;phpstorm配合xdebug调试&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="https://sandaljack.github.io/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://sandaljack.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP 扩展安装指南</title>
+    <link href="https://sandaljack.github.io/2017/06/27/php-extend/"/>
+    <id>https://sandaljack.github.io/2017/06/27/php-extend/</id>
+    <published>2017-06-27T11:10:23.000Z</published>
+    <updated>2018-04-07T08:13:19.897Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/rpStRRz.png&quot; width=&quot;600&quot; height=&quot;300&quot; align=&quot;center&quot;&gt;&lt;br&gt;&lt;strong&gt;php 扩展的安装和配置&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="https://sandaljack.github.io/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://sandaljack.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LAMP环境的搭建</title>
-    <link href="https://sandaljack.github.io/2017/07/16/linux-lamp/"/>
-    <id>https://sandaljack.github.io/2017/07/16/linux-lamp/</id>
-    <published>2017-07-16T11:04:07.000Z</published>
-    <updated>2017-08-22T09:07:42.409Z</updated>
+    <link href="https://sandaljack.github.io/2017/05/16/linux-lamp/"/>
+    <id>https://sandaljack.github.io/2017/05/16/linux-lamp/</id>
+    <published>2017-05-16T11:04:07.000Z</published>
+    <updated>2018-04-06T10:57:56.149Z</updated>
     
     <summary type="html">
     
@@ -81,10 +141,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sandaljack.github.io/2017/07/01/hello-world/"/>
-    <id>https://sandaljack.github.io/2017/07/01/hello-world/</id>
-    <published>2017-07-01T04:20:07.000Z</published>
-    <updated>2017-09-03T07:48:35.551Z</updated>
+    <link href="https://sandaljack.github.io/2017/03/01/hello-world/"/>
+    <id>https://sandaljack.github.io/2017/03/01/hello-world/</id>
+    <published>2017-03-01T04:20:07.000Z</published>
+    <updated>2018-04-06T11:57:17.294Z</updated>
     
     <summary type="html">
     

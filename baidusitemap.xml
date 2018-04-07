@@ -3,14 +3,33 @@
 
 
     
+  <url>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/06/27/php-extend/</loc>
+    <lastmod>2018-04-07T08:13:19.897Z</lastmod>
+    <data>
+        <display>
+        <title>PHP 扩展安装指南</title>
+        <pubTime>2017-06-27T11:10:23.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="https://sandaljack.github.io/liangxuejie.github.io/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
-    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/08/15/mysql-optimization/</loc>
-    <lastmod>2017-09-03T08:07:10.149Z</lastmod>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2018/01/03/mysql-optimization/</loc>
+    <lastmod>2018-04-07T08:12:15.795Z</lastmod>
     <data>
         <display>
         <title>数据库性能调优</title>
-        <pubTime>2017-08-15T07:20:07.000Z</pubTime>
+        <pubTime>2018-01-03T07:20:07.000Z</pubTime>
         
         <tag>mysql</tag>
          
@@ -25,27 +44,12 @@
 
     
   <url>
-    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/07/01/hello-world/</loc>
-    <lastmod>2017-09-03T07:48:35.551Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-07-01T04:20:07.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/07/30/php-ajax-crossdomain/</loc>
-    <lastmod>2017-08-28T07:16:21.059Z</lastmod>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/09/23/php-ajax-crossdomain/</loc>
+    <lastmod>2018-04-07T08:11:33.475Z</lastmod>
     <data>
         <display>
         <title>PHP Ajax 跨域问题最佳解决方案</title>
-        <pubTime>2017-07-30T12:40:07.000Z</pubTime>
+        <pubTime>2017-09-23T12:40:07.000Z</pubTime>
         
         <tag>php</tag>
          
@@ -61,15 +65,69 @@
     </url>
 
     
+  <url>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/07/17/php-phpstorm-xdebug/</loc>
+    <lastmod>2018-04-07T08:11:01.965Z</lastmod>
+    <data>
+        <display>
+        <title>phpstorm安装xdebug断点调试</title>
+        <pubTime>2017-07-17T05:20:27.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="https://sandaljack.github.io/liangxuejie.github.io/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
   <url>
-    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/07/16/linux-lamp/</loc>
-    <lastmod>2017-08-22T09:07:42.409Z</lastmod>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/11/08/php_sql_attatck/</loc>
+    <lastmod>2018-04-06T11:59:38.189Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈预防SQL注入</title>
+        <pubTime>2017-11-08T05:27:57.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="https://sandaljack.github.io/liangxuejie.github.io/categories/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/03/01/hello-world/</loc>
+    <lastmod>2018-04-06T11:57:17.294Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-03-01T04:20:07.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sandaljack.github.io/liangxuejie.github.io/2017/05/16/linux-lamp/</loc>
+    <lastmod>2018-04-06T10:57:56.149Z</lastmod>
     <data>
         <display>
         <title>LAMP环境的搭建</title>
-        <pubTime>2017-07-16T11:04:07.000Z</pubTime>
+        <pubTime>2017-05-16T11:04:07.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -84,6 +142,8 @@
     </data>
     </url>
 
+    
+    
     
     
 </urlset>

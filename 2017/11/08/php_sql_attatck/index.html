@@ -77,7 +77,7 @@
 <link href="/liangxuejie.github.io/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -95,15 +95,19 @@
 
 
 
-<meta name="description" content="一个在php开发之路上的草根程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="凉小窝">
-<meta property="og:url" content="https://sandaljack.github.io/tags/lamp环境/index.html">
+<meta name="description" content="预防SQL注入">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈预防SQL注入">
+<meta property="og:url" content="https://sandaljack.github.io/2017/11/08/php_sql_attatck/index.html">
 <meta property="og:site_name" content="凉小窝">
-<meta property="og:description" content="一个在php开发之路上的草根程序员">
+<meta property="og:description" content="预防SQL注入">
+<meta property="og:image" content="https://i.imgur.com/rLnk3hD.png">
+<meta property="og:updated_time" content="2018-04-06T11:59:38.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凉小窝">
-<meta name="twitter:description" content="一个在php开发之路上的草根程序员">
+<meta name="twitter:title" content="谈谈预防SQL注入">
+<meta name="twitter:description" content="预防SQL注入">
+<meta name="twitter:image" content="https://i.imgur.com/rLnk3hD.png">
 
 
 
@@ -131,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://sandaljack.github.io/tags/lamp环境/"/>
+  <link rel="canonical" href="https://sandaljack.github.io/2017/11/08/php_sql_attatck/"/>
 
 
 
 
 
-  <title>标签: lamp环境 | 凉小窝</title>
+  <title>谈谈预防SQL注入 | 凉小窝</title>
   
 
 
@@ -169,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -307,44 +311,201 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>lamp环境<small>标签</small>
-      </h1>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://sandaljack.github.io/liangxuejie.github.io/2017/11/08/php_sql_attatck/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liangxuejie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/liangxuejie.github.io/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凉小窝">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">谈谈预防SQL注入</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T13:27:57+08:00">
+                2017-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/liangxuejie.github.io/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p><div align="center"><br><img src="https://i.imgur.com/rLnk3hD.png" width="600" height="300" align="center"><br><strong>预防SQL注入</strong><br></div><br><a id="more"></a> </p>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><blockquote>
+<p>SQL注入是通过在SQL语句被数据库解析之前，以修改其语法的形式工作的。只要你在解析语句之前插入动态部分，就存在SQL注入的风险。</p>
+</blockquote>
+<p>造成SQL注入的原因<br>动态部分：1、 用户传递进来的参数 2、 有可能是从数据库查询出来的</p>
+<pre><code>//当$row[&apos;name&apos;]值为 o&apos;jack就会导致执行错误。
+//当$row[&apos;name&apos;]值为 &apos; or 1=1;#  就会将表的所有数据查询出来
+$sql = &quot;select * from user where name = &quot;.&quot;&apos;{$row[&apos;name&apos;]}&apos;&quot;;
+</code></pre><p> $stmtObj = $pdo-&gt;query($sql);</p>
+<h3 id="防止SQL注入的一些方法"><a href="#防止SQL注入的一些方法" class="headerlink" title="防止SQL注入的一些方法"></a>防止SQL注入的一些方法</h3><p>1.转义<br>防止SQL语句包含任何不匹配的引号的最古老的方法，就是对所有的引号字符进行转义操作，使他们不至于成为字符串的结束符。比如PDO的quote()函数<br>2.查询参数<br>查询参数的做法是在准备查询语句的时候，在对应参数的地方使用参数占位符。随后，在执行这个预先准备好的查询时提供一个参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$stmt = $pdo-&gt;prepare(&apos;select id,name from user where name = ?&apos;);</div><div class="line"></div><div class="line">$params = array($_POST[&apos;name&apos;]);</div><div class="line"></div><div class="line">$stmt-&gt;execute($params);</div></pre></td></tr></table></figure>
+<p>不过查询方式也存在不足</p>
+<p>1） 多个值的列表不可以当成单一参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$stmt = $pdo-&gt;prepare(&apos;select * from user where id in (?)&apos;);</div><div class="line"></div><div class="line">   $stmt-&gt;execute(array(&apos;1,2,3&apos;));</div><div class="line"></div><div class="line">   上面的查询结果和下面的不一样：</div><div class="line"></div><div class="line">   select * from user where id in(1,2,3)</div></pre></td></tr></table></figure></p>
+<p>2) 表名无法作为参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$stmt = $pdo-&gt;prepare(&apos;select id,name from ? where id =12&apos;);</div><div class="line"></div><div class="line">   $stmt-&gt;execute(array(&apos;user&apos;));</div><div class="line"></div><div class="line">   这么做是想将一个字符串插入表名所在位置，但是这是报错的</div></pre></td></tr></table></figure>
+<p>3) 列名无法作为参数</p>
+<pre><code>$stmt = $pdo-&gt;prepare(&apos;select ? from ?user where id =12&apos;)//这是错误的;
+</code></pre><p>4) SQL关键字不能作为参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$stmt = $pdo-&gt;prepare(&apos;select id,name from user order by id ?&apos;);//这是错误的</div><div class="line">$stmt-&gt;execute(array(&apos;desc&apos;));</div></pre></td></tr></table></figure></p>
+<h3 id="预处理原理"><a href="#预处理原理" class="headerlink" title="预处理原理"></a>预处理原理</h3><p>1.数据库首先会解析准备好的SQL查询语句，在完成这一步操作之后，就没有任何方法能够改变那句SQL查询语句的结构。<br>2.在执行一个已经准备好的SQL查询语句时，需要提供对应的参数，每个你提供的参数都对应预先准备好的查询语句中的一个占位符<br>3.重复执行这个预先准备好的查询语句，只需要使用新的参数替换老的参数就行。</p>
+<h3 id="将用户与代码隔离"><a href="#将用户与代码隔离" class="headerlink" title="将用户与代码隔离"></a>将用户与代码隔离</h3><p>预处理(查询参数)和转义字符能够帮助你将字符串类型的值插入到SQL中，但这些技术在需要插入表/列名或者SQL关键字的时候不起作用。<br>问题:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$sortOrder = $_GET[&apos;sort&apos;];//用户传递过来的</div><div class="line">//直接将用户传递过来的数据，拼接成SQl语句，不安全。</div><div class="line">$sql = &quot;select id,name from user order by $sortOrder&quot;;</div></pre></td></tr></table></figure></p>
+<p>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//将请求的参数作为索引值去查找预先定义好的值，然后用这些预先定义的值来组织SQL查询语句。</div><div class="line">$sortCondition = array(</div><div class="line">    &apos;up&apos; =&gt; &apos;ASC&apos;,</div><div class="line">    &apos;down&apos; =&gt; &apos;DESC&apos;</div><div class="line">);</div><div class="line"></div><div class="line">//当需要倒序，用户传递down</div><div class="line">$sortOrder = $_GET[&apos;sort&apos;];//用户传递过来的数据</div><div class="line"></div><div class="line">if (array_key_exists($sortOrder, $sortCondition) ) &#123;</div><div class="line"></div><div class="line">    $sort = $sortCondition[$sortOrder];</div><div class="line">&#125; else &#123;</div><div class="line">    $sort = &apos;DESC&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//现在$sort这变量就是安全的了，因为他只能是$sortCondition预先定义的值</div><div class="line">$sql = &quot;select id,name from user order by $sort&quot;;</div></pre></td></tr></table></figure></p>
+<h3 id="审查代码"><a href="#审查代码" class="headerlink" title="审查代码"></a>审查代码</h3><p>找到瑕疵的最好方法就是找一双眼睛一起来看看。<br>在检查代码是否包含SQL注入风险的时候，参考下面几点建议：<br>1.找出所有使用了程序变量、字符串连接或者替换等方法组成的SQL语句<br>2.跟踪在SQL语句中使用的动态内容来源。找出所有外部的输入，比如用户输入、文件、系统环境、网络服务、第三方代码、，甚至从数据库中获取的字符串<br>3.假设任何外部内容都是潜在的威胁。对于不受信任的内容都要进行过滤，验证或者使用数组映射的方式来处理(参考“将用户与代码隔离”)<br>4.在将外部数据合并到SQL语句时，使用查询参数，或者用稳健的转义函数预先处理<br>5.别忘了在存储过程的代码以及任何其他使用SQL动态查询语句的地方做同样的检查</p>
 
-      <h2 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/liangxuejie.github.io/2017/05/16/linux-lamp/" itemprop="url">
-              
-                <span itemprop="name">LAMP环境的搭建</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-16T19:04:07+08:00"
-              content="2017-05-16" >
-          05-16
-        </time>
-      </div>
+    <div>
+      
+        
 
-    </header>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/liangxuejie.github.io/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/liangxuejie.github.io/2017/09/23/php-ajax-crossdomain/" rel="next" title="PHP Ajax 跨域问题最佳解决方案">
+                <i class="fa fa-chevron-left"></i> PHP Ajax 跨域问题最佳解决方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/liangxuejie.github.io/2018/01/03/mysql-optimization/" rel="prev" title="数据库性能调优">
+                数据库性能调优 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +513,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -372,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/liangxuejie.github.io/uploads/touxiang.jpg"
@@ -442,6 +616,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入"><span class="nav-number">1.</span> <span class="nav-text">SQL注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#防止SQL注入的一些方法"><span class="nav-number">1.1.</span> <span class="nav-text">防止SQL注入的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预处理原理"><span class="nav-number">1.2.</span> <span class="nav-text">预处理原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将用户与代码隔离"><span class="nav-number">1.3.</span> <span class="nav-text">将用户与代码隔离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#审查代码"><span class="nav-number">1.4.</span> <span class="nav-text">审查代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -575,10 +765,10 @@
   
 
   
-    <script type="text/javascript" src="/liangxuejie.github.io/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/liangxuejie.github.io/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/liangxuejie.github.io/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
